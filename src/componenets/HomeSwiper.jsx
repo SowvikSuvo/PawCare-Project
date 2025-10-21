@@ -1,4 +1,5 @@
 import React from "react";
+import { TypeAnimation } from "react-type-animation";
 import {
   FaArrowRight,
   FaLongArrowAltLeft,
@@ -17,12 +18,31 @@ import pet10 from "../assets/cozyPets/10.jpeg";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
+import "animate.css";
 import "swiper/css";
 import "./HomeSwiper";
 
 const HomeSwiper = () => {
   return (
     <>
+      <TypeAnimation
+        className="text-center text-secondary font-semibold text-lg ml-55 mx-auto "
+        sequence={[
+          // Same substring at the start will only be typed once, initially
+          "pets in cozy outfits",
+          1000,
+          "tiny scarves and booties neat",
+          1000,
+          "They watch the falling winter snow",
+          1000,
+          "Our furry friends are warm and sweet. 🐾",
+          1000,
+        ]}
+        speed={50}
+        style={{ fontSize: "2em" }}
+        repeat={Infinity}
+      />
+      <h2 className="text-center text-secondary font-semibold text-lg "></h2>
       <h2 className="text-center relative flex justify-center items-center mb-5 mt-2">
         <FaLongArrowAltLeft className="absolute mr-20"></FaLongArrowAltLeft>{" "}
         Swipe{" "}
@@ -53,6 +73,9 @@ const HomeSwiper = () => {
           </SwiperSlide>
           <SwiperSlide>
             <img className="w-60 h-60 mx-auto rounded-lg" src={pet8} alt="" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img className="w-60 h-60 mx-auto rounded-lg" src={pet9} alt="" />
           </SwiperSlide>
           <SwiperSlide>
             <img className="w-60 h-60 mx-auto rounded-lg" src={pet10} alt="" />

@@ -1,11 +1,12 @@
-import React from "react";
 import HomeSwiper from "../componenets/HomeSwiper";
+import HomeService from "../componenets/HomeService";
 
 const Home = () => {
   return (
     <div>
       <HomeSwiper></HomeSwiper>
-      Home
+
+      <HomeService></HomeService>
     </div>
   );
 };

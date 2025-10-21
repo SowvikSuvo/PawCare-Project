@@ -8,7 +8,7 @@
     "rating": 4.8,
     "slotsAvailable": 8,
     "description": "A deep moisturizing and protective wax application to prevent cracking and chapping from ice, snow, and salt.",
-    "image": "https://i.postimg.cc/winterpawcare.png",
+    "image": "https://i.ibb.co.com/wZHLzXn2/1.jpg",
     "category": "Grooming"
   },
   {
@@ -20,7 +20,7 @@
     "rating": 4.9,
     "slotsAvailable": 4,
     "description": "A comprehensive vet checkup including blood work and a vitamin supplement plan to boost immunity against winter illnesses.",
-    "image": "https://i.postimg.cc/pethealthcheck.png",
+    "image": "https://i.ibb.co.com/Jjvb08RJ/2.jpg",
     "category": "Veterinary"
   },
   {
@@ -32,7 +32,7 @@
     "rating": 4.7,
     "slotsAvailable": 12,
     "description": "Overnight boarding service upgrade offering a therapeutic, self-heating orthopedic bed for older or small pets.",
-    "image": "https://i.postimg.cc/heatedbed.png",
+    "image": "https://i.ibb.co.com/5Xzj7Lc6/3.jpg",
     "category": "Boarding"
   },
   {
@@ -44,7 +44,7 @@
     "rating": 4.6,
     "slotsAvailable": 6,
     "description": "Professional fitting and training session to ensure your dog is comfortable wearing protective waterproof booties for winter walks.",
-    "image": "https://i.postimg.cc/dogbooties.png",
+    "image": "https://i.ibb.co.com/rRvdxfrL/4.jpg",
     "category": "Clothing"
   },
   {
@@ -56,7 +56,7 @@
     "rating": 5.0,
     "slotsAvailable": 3,
     "description": "A specialized massage treatment using heat packs to soothe stiff joints and reduce pain exacerbated by cold winter weather.",
-    "image": "https://i.postimg.cc/petmassage.png",
+    "image": "https://i.ibb.co.com/TxPPffgD/5.jpg",
     "category": "Therapy"
   },
   {
@@ -68,7 +68,80 @@
     "rating": 4.5,
     "slotsAvailable": 10,
     "description": "A virtual or indoor class teaching new puzzle games and activities to keep your pet mentally stimulated during long, cold days indoors.",
-    "image": "https://i.postimg.cc/petenrichment.png",
+    "image": "https://i.ibb.co.com/PzmJ0GZ1/6.jpg",
     "category": "Training"
+  },
+
+  {
+    "serviceId": 107,
+    "serviceName": "De-Icing Agent Removal Grooming",
+    "providerName": "Clean Paws & Tails",
+    "providerEmail": "grooming@cleanpaw.net",
+    "price": 45,
+    "rating": 4.7,
+    "slotsAvailable": 5,
+    "description": "A specialized bath and paw rinse using gentle, moisturizing products to thoroughly remove harsh street salts and de-icing chemicals, preventing irritation.",
+    "image": "https://i.postimg.cc/deicingsafety.png",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 108,
+    "serviceName": "Indoor Treadmill & Play Sessions",
+    "providerName": "K9 Energy Outlet",
+    "providerEmail": "exercise@k9energy.com",
+    "price": 30,
+    "rating": 4.9,
+    "slotsAvailable": 15,
+    "description": "Supervised 30-minute indoor exercise session, including controlled treadmill time and agility games to burn energy during bad weather.",
+    "image": "https://i.postimg.cc/indoortreadmill.png",
+    "category": "Exercise"
+  },
+  {
+    "serviceId": 109,
+    "serviceName": "Cold Weather Emergency Transport",
+    "providerName": "PetSafe Rapid Response",
+    "providerEmail": "emergency@petsaferr.org",
+    "price": 120,
+    "rating": 5.0,
+    "slotsAvailable": 2,
+    "description": "24/7 heated, insulated transport service for urgent trips to the veterinary hospital during severe winter weather conditions or heavy snow.",
+    "image": "https://i.postimg.cc/emergencytransport.png",
+    "category": "Safety"
+  },
+  {
+    "serviceId": 110,
+    "serviceName": "Pet-Safe Heating Pad Installation",
+    "providerName": "Cozy Home Pet Solutions",
+    "providerEmail": "install@cozyhomes.net",
+    "price": 55,
+    "rating": 4.6,
+    "slotsAvailable": 7,
+    "description": "Professional installation and safety check of temperature-regulated, chew-proof heating pads and blankets for outdoor shelters or indoor rest areas.",
+    "image": "https://i.postimg.cc/heatingpad.png",
+    "category": "Home Service"
+  },
+  {
+    "serviceId": 111,
+    "serviceName": "Winter Weight & Nutrition Consultation",
+    "providerName": "Healthy Pet Dietician",
+    "providerEmail": "nutrition@healthypet.com",
+    "price": 85,
+    "rating": 4.8,
+    "slotsAvailable": 4,
+    "description": "Virtual consultation to adjust your pet's caloric intake and supplement schedule to maintain a healthy weight and optimal coat condition in the winter.",
+    "image": "https://i.postimg.cc/nutritionconsult.png",
+    "category": "Wellness"
+  },
+  {
+    "serviceId": 112,
+    "serviceName": "Small Pet Hibernation Habitat Setup",
+    "providerName": "Critter Comfort Experts",
+    "providerEmail": "smallpet@crittercomfort.com",
+    "price": 50,
+    "rating": 4.5,
+    "slotsAvailable": 9,
+    "description": "Specialized service for hamsters, gerbils, and other small pets to ensure their habitat has proper insulation and temperature control to prevent accidental torpor (hibernation).",
+    "image": "https://i.postimg.cc/smallpetsetup.png",
+    "category": "Small Animals"
   }
 ]

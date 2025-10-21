@@ -11,9 +11,13 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Home></Home>,
+        loader: () => fetch("/pet.json"),
+        hydrateFallbackElement: (
+          <span className="loading loading-spinner text-warning"></span>
+        ),
       },
       {
-        path: "/services",
+        path: "/services/:id",
         element: <Services></Services>,
       },
       {
