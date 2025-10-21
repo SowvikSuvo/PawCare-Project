@@ -6,7 +6,7 @@ const HomeCard = ({ data }) => {
   const { serviceName, image, rating, price } = data;
 
   return (
-    <div className=" card bg-base-100 shadow-xl max-w-screen-2xl mx-auto w-full  hover:shadow-2xl transition-all duration-300 rounded-2xl border border-gray-200 ">
+    <div className=" card bg-base-100 shadow-xl mx-auto rounded-2xl border border-gray-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ">
       <figure className="relative">
         <img
           src={image}
