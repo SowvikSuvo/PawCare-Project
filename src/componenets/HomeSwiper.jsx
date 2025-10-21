@@ -26,7 +26,7 @@ const HomeSwiper = () => {
   return (
     <>
       <TypeAnimation
-        className="text-center text-secondary font-semibold text-lg ml-55 mx-auto "
+        className="text-center text-secondary font-semibold text-lg mx-auto "
         sequence={[
           // Same substring at the start will only be typed once, initially
           "pets in cozy outfits",

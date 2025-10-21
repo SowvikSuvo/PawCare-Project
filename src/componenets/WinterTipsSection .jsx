@@ -37,6 +37,12 @@ const WinterTipsSection = () => {
       description:
         "Reduce exposure during extremely cold or windy days to prevent hypothermia.",
     },
+    {
+      icon: <MdOutlinePets></MdOutlinePets>,
+      title: "Keep Your Pet Hydrated",
+      description:
+        "Even in cold weather, pets need fresh water to stay healthy and regulate body temperature.",
+    },
   ];
 
   return (
