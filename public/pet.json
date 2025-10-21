@@ -1,0 +1,74 @@
+[
+  {
+    "serviceId": 101,
+    "serviceName": "Paws & Pad Moisturizing Treatment",
+    "providerName": "The Happy Paws Spa",
+    "providerEmail": "spa@happypaws.com",
+    "price": 35,
+    "rating": 4.8,
+    "slotsAvailable": 8,
+    "description": "A deep moisturizing and protective wax application to prevent cracking and chapping from ice, snow, and salt.",
+    "image": "https://i.postimg.cc/winterpawcare.png",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 102,
+    "serviceName": "Seasonal Immunity Booster Checkup",
+    "providerName": "VCA Winter Pet Clinic",
+    "providerEmail": "clinic@vca-pets.com",
+    "price": 75,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "A comprehensive vet checkup including blood work and a vitamin supplement plan to boost immunity against winter illnesses.",
+    "image": "https://i.postimg.cc/pethealthcheck.png",
+    "category": "Veterinary"
+  },
+  {
+    "serviceId": 103,
+    "serviceName": "Heated Bed & Blanket Rental",
+    "providerName": "Cozy Critters Boarding",
+    "providerEmail": "booking@cozycritters.com",
+    "price": 20,
+    "rating": 4.7,
+    "slotsAvailable": 12,
+    "description": "Overnight boarding service upgrade offering a therapeutic, self-heating orthopedic bed for older or small pets.",
+    "image": "https://i.postimg.cc/heatedbed.png",
+    "category": "Boarding"
+  },
+  {
+    "serviceId": 104,
+    "serviceName": "Outdoor Salt/Ice Booties Fitting",
+    "providerName": "K9 Gear Specialists",
+    "providerEmail": "support@k9gear.com",
+    "price": 40,
+    "rating": 4.6,
+    "slotsAvailable": 6,
+    "description": "Professional fitting and training session to ensure your dog is comfortable wearing protective waterproof booties for winter walks.",
+    "image": "https://i.postimg.cc/dogbooties.png",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 105,
+    "serviceName": "Senior Joint & Arthritis Massage",
+    "providerName": "Pet Therapy Wellness Center",
+    "providerEmail": "wellness@pettherapy.org",
+    "price": 60,
+    "rating": 5.0,
+    "slotsAvailable": 3,
+    "description": "A specialized massage treatment using heat packs to soothe stiff joints and reduce pain exacerbated by cold winter weather.",
+    "image": "https://i.postimg.cc/petmassage.png",
+    "category": "Therapy"
+  },
+  {
+    "serviceId": 106,
+    "serviceName": "Indoor-Focused Enrichment Class",
+    "providerName": "Brainy Beasts Training",
+    "providerEmail": "class@brainybeasts.com",
+    "price": 28,
+    "rating": 4.5,
+    "slotsAvailable": 10,
+    "description": "A virtual or indoor class teaching new puzzle games and activities to keep your pet mentally stimulated during long, cold days indoors.",
+    "image": "https://i.postimg.cc/petenrichment.png",
+    "category": "Training"
+  }
+]
