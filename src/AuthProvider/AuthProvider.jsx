@@ -20,6 +20,7 @@ const AuthProvider = ({ children }) => {
   console.log(user, loading);
 
   const createUser = (email, password) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
@@ -32,6 +33,7 @@ const AuthProvider = ({ children }) => {
   };
 
   const LogIn = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 

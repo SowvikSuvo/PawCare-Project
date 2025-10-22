@@ -1,4 +1,4 @@
-import React, { use } from "react";
+import React, { use, useState } from "react";
 import { Link, NavLink } from "react-router";
 import userImg from "../assets/user.png";
 import { AuthContext } from "../AuthProvider/AuthProvider";
@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 
 const Navbar = () => {
   const { user, logOut } = use(AuthContext);
+  const [hover, setHover] = useState(false);
   const navLinks = (
     <>
       <li>
@@ -67,13 +68,24 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
-        <div className="navbar-end md:mr-30 gap-2">
+        <div className="navbar-end md:mr-30 gap-2 ">
           {/* {user && user.email} */}
-          <img
-            className="w-12 h-12 rounded-full"
-            src={`${user ? user.photoURL : userImg}`}
-            alt=""
-          />
+          <div
+            className="relative w-10 h-10 group"
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+          >
+            {/* Hover Display Name */}
+            <span className="absolute -left-26 top-1 bg-gray-800 text-white text-sm py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
+              {user?.displayName}
+            </span>
+            <img
+              className="w-10 h-10 rounded-full cursor-pointer border-2 border-pink-500 "
+              src={`${user ? user.photoURL : userImg}`}
+              alt=""
+            />
+          </div>
+
           {user ? (
             <button onClick={handleLogOut} className="btn btn-primary px-10">
               Log Out

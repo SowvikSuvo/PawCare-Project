@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router";
+import { toast } from "react-toastify";
 
 const ViewDetailsCard = ({ views }) => {
+  const [showModal, setShowModal] = useState(false);
+  const [formData, setFormData] = useState({ name: "", email: "" });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    toast.success("🎉 Booking Successful!");
+    setFormData({ name: "", email: "" });
+    setShowModal(false);
+  };
+
   const {
     serviceName,
     providerName,
@@ -35,7 +46,7 @@ const ViewDetailsCard = ({ views }) => {
           {providerName}
         </p>
         <p className="text-sm text-gray-600">
-          <span className="font-semibold text-gray-700">Email:  </span> {" "}
+          <span className="font-semibold text-gray-700">Email: </span>{" "}
           {providerEmail}
         </p>
 
@@ -66,11 +77,63 @@ const ViewDetailsCard = ({ views }) => {
 
         {/* Button */}
         <div className="pt-4">
-          <Link className="btn w-full bg-pink-600 hover:bg-pink-700 text-white text-sm font-semibold rounded-xl">
+          <Link
+            onClick={() => setShowModal(true)}
+            className="btn w-full bg-pink-600 hover:bg-pink-700 text-white text-sm font-semibold rounded-xl"
+          >
             Book Now
           </Link>
         </div>
       </div>
+
+      {/* DaisyUI Modal */}
+      {showModal && (
+        <dialog open className="modal modal-bottom sm:modal-middle">
+          <div className="modal-box">
+            <h3 className="font-bold text-lg text-center text-pink-600 mb-4">
+              Book Service
+            </h3>
+            <form onSubmit={handleSubmit} className="space-y-3">
+              <input
+                type="text"
+                placeholder="Your Name"
+                required
+                className="input input-bordered w-full"
+                value={formData.name}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
+              />
+              <input
+                type="email"
+                placeholder="Your Email"
+                required
+                className="input input-bordered w-full"
+                value={formData.email}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
+              />
+
+              <button
+                type="submit"
+                className="btn bg-pink-600 hover:bg-pink-700 text-white w-full"
+              >
+                Submit
+              </button>
+            </form>
+
+            <div className="modal-action">
+              <button
+                onClick={() => setShowModal(false)}
+                className="btn btn-outline btn-sm"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </dialog>
+      )}
     </div>
   );
 };
