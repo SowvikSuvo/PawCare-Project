@@ -8,7 +8,7 @@ import { IoEyeOff } from "react-icons/io5";
 
 const Login = () => {
   const [error, setError] = useState("");
-  const { LogIn } = use(AuthContext);
+  const { LogIn, googleSignIn } = use(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
@@ -34,17 +34,28 @@ const Login = () => {
         setError(error.message);
       });
   };
-  // const handleForgetPassword = () => {
-  //   const email = emailRef.current?.value;
-  //   console.log("forget password", email);
-  //   resetPassword(email)
-  //     .then(() => {
-  //       toast.success("Please Check your email");
-  //     })
-  //     .catch((error) => {
-  //       toast.error(error.message);
-  //     });
-  // };
+
+  const handleGoogleSignin = () => {
+    googleSignIn()
+      .then((result) => {
+        console.log(result.user);
+        navigate(`${location.state ? location.state : "/"}`);
+        const loggedInUser = result.user;
+        if (!loggedInUser.email) {
+          if (loggedInUser.providerData) {
+            const gProvider = loggedInUser.providerData.find(
+              (p) => p.providerId === "google.com"
+            );
+            if (gProvider && gProvider.email) {
+              loggedInUser.email = gProvider.email;
+            }
+          }
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <div className="flex justify-center  items-center mt-20">
@@ -112,7 +123,7 @@ const Login = () => {
               {/* Google Signin */}
               <button
                 type="button"
-                onClick={"handleGoogleSignin"}
+                onClick={handleGoogleSignin}
                 className="flex items-center justify-center gap-3 bg-gray-300 text-black px-5 py-2 rounded-lg w-full font-semibold hover:bg-secondary hover:text-white transition-colors cursor-pointer"
               >
                 <img

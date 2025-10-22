@@ -78,10 +78,10 @@ const ForgetPassword = () => {
 
           <div className="text-center mt-4">
             <a
-              href="/login"
-              className="text-sm text-indigo-600 hover:underline"
+              href="/auth/login"
+              className="text-sm btn outline text-indigo-600 hover:underline"
             >
-              🔙 Back to Login
+               Back to Login
             </a>
           </div>
         </div>
