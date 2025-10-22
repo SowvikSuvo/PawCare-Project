@@ -55,7 +55,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-end md:mr-30 gap-2">
           <img src={userImg} alt="" />
-          <Link to="/login" className="btn btn-primary">
+          <Link to="/auth/login" className="btn btn-primary">
             Login
           </Link>
         </div>

@@ -29,7 +29,7 @@ const HomeSwiper = () => {
         className="text-center text-secondary font-semibold text-lg mx-auto "
         sequence={[
           // Same substring at the start will only be typed once, initially
-          "pets in cozy outfits",
+          "🐾pets in cozy outfits🐾",
           1000,
           "tiny scarves and booties neat",
           1000,
@@ -51,34 +51,34 @@ const HomeSwiper = () => {
       <div className="flex justify-center items-center container mx-auto  ">
         <Swiper className="mySwiper">
           <SwiperSlide>
-            <img className="w-60 h-60 mx-auto rounded-lg" src={pet1} alt="" />
+            <img className="w-70 h-60 mx-auto rounded-lg" src={pet1} alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="w-60 h-60 mx-auto rounded-lg" src={pet2} alt="" />
+            <img className="w-70 h-60 mx-auto rounded-lg" src={pet2} alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="w-60 h-60 mx-auto rounded-lg" src={pet3} alt="" />
+            <img className="w-70 h-60 mx-auto rounded-lg" src={pet3} alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="w-60 h-60 mx-auto rounded-lg" src={pet4} alt="" />
+            <img className="w-70 h-60 mx-auto rounded-lg" src={pet4} alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="w-60 h-60 mx-auto rounded-lg" src={pet5} alt="" />
+            <img className="w-70 h-60 mx-auto rounded-lg" src={pet5} alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="w-60 h-60 mx-auto rounded-lg" src={pet6} alt="" />
+            <img className="w-70 h-60 mx-auto rounded-lg" src={pet6} alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="w-60 h-60 mx-auto rounded-lg" src={pet7} alt="" />
+            <img className="w-70 h-60 mx-auto rounded-lg" src={pet7} alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="w-60 h-60 mx-auto rounded-lg" src={pet8} alt="" />
+            <img className="w-70 h-60 mx-auto rounded-lg" src={pet8} alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="w-60 h-60 mx-auto rounded-lg" src={pet9} alt="" />
+            <img className="w-70 h-60 mx-auto rounded-lg" src={pet9} alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="w-60 h-60 mx-auto rounded-lg" src={pet10} alt="" />
+            <img className="w-70 h-60 mx-auto rounded-lg" src={pet10} alt="" />
           </SwiperSlide>
         </Swiper>
       </div>

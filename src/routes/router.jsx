@@ -1,9 +1,11 @@
 import { createBrowserRouter } from "react-router";
-import HomeLayout from "../HomeLayout/HomeLayout";
+import HomeLayout from "../Layout/HomeLayout";
 import Home from "../pages/Home";
 import Services from "../pages/Services";
 import MyProfile from "../pages/MyProfile";
 import Login from "../pages/Login";
+import Register from "../pages/Register";
+import AuthLayout from "../Layout/AuthLayout";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,14 +22,28 @@ const router = createBrowserRouter([
       {
         path: "/services",
         element: <Services></Services>,
+        loader: () => fetch("/pet.json"),
+        hydrateFallbackElement: (
+          <span className="loading loading-spinner text-warning"></span>
+        ),
       },
       {
         path: "/profile",
         element: <MyProfile></MyProfile>,
       },
+    ],
+  },
+  {
+    path: "/auth",
+    element: <AuthLayout></AuthLayout>,
+    children: [
       {
-        path: "/login",
+        path: "/auth/login",
         element: <Login></Login>,
+      },
+      {
+        path: "/auth/register",
+        element: <Register></Register>,
       },
     ],
   },

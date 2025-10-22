@@ -20,8 +20,11 @@ const HomeService = () => {
         ))}
       </div>
       <div className="flex justify-center mb-2">
-        <Link to={"/services"} className="btn bg-blue-500 text-white">
-          See All
+        <Link
+          to={"/services"}
+          className="btn bg-blue-500 text-white hover:scale-105 transition ease-in-out"
+        >
+          See All Services
         </Link>
       </div>
       <div>
