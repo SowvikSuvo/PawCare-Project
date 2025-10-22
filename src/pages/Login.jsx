@@ -40,6 +40,7 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         navigate(`${location.state ? location.state : "/"}`);
+        toast.success("Sign In with Google SuccessFully");
         const loggedInUser = result.user;
         if (!loggedInUser.email) {
           if (loggedInUser.providerData) {
@@ -53,7 +54,7 @@ const Login = () => {
         }
       })
       .catch((error) => {
-        console.log(error);
+        toast.error(error);
       });
   };
 

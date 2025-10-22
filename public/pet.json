@@ -81,7 +81,7 @@
     "rating": 4.7,
     "slotsAvailable": 5,
     "description": "A specialized bath and paw rinse using gentle, moisturizing products to thoroughly remove harsh street salts and de-icing chemicals, preventing irritation.",
-    "image": "https://i.postimg.cc/deicingsafety.png",
+    "image": "https://i.ibb.co.com/9mX0ssQs/7.jpg",
     "category": "Grooming"
   },
   {
@@ -93,7 +93,7 @@
     "rating": 4.9,
     "slotsAvailable": 15,
     "description": "Supervised 30-minute indoor exercise session, including controlled treadmill time and agility games to burn energy during bad weather.",
-    "image": "https://i.postimg.cc/indoortreadmill.png",
+    "image": "https://i.ibb.co.com/GvC3Pz4s/8.jpg",
     "category": "Exercise"
   },
   {
@@ -105,7 +105,7 @@
     "rating": 5.0,
     "slotsAvailable": 2,
     "description": "24/7 heated, insulated transport service for urgent trips to the veterinary hospital during severe winter weather conditions or heavy snow.",
-    "image": "https://i.postimg.cc/emergencytransport.png",
+    "image": "https://i.ibb.co.com/PsdLdpsf/9.jpg",
     "category": "Safety"
   },
   {
@@ -117,7 +117,7 @@
     "rating": 4.6,
     "slotsAvailable": 7,
     "description": "Professional installation and safety check of temperature-regulated, chew-proof heating pads and blankets for outdoor shelters or indoor rest areas.",
-    "image": "https://i.postimg.cc/heatingpad.png",
+    "image": "https://i.ibb.co.com/Q7Thz9JC/10.jpg",
     "category": "Home Service"
   },
   {
@@ -129,7 +129,7 @@
     "rating": 4.8,
     "slotsAvailable": 4,
     "description": "Virtual consultation to adjust your pet's caloric intake and supplement schedule to maintain a healthy weight and optimal coat condition in the winter.",
-    "image": "https://i.postimg.cc/nutritionconsult.png",
+    "image": "https://i.ibb.co.com/XkM8SsKp/11.jpg",
     "category": "Wellness"
   },
   {
@@ -141,7 +141,80 @@
     "rating": 4.5,
     "slotsAvailable": 9,
     "description": "Specialized service for hamsters, gerbils, and other small pets to ensure their habitat has proper insulation and temperature control to prevent accidental torpor (hibernation).",
-    "image": "https://i.postimg.cc/smallpetsetup.png",
+    "image": "https://i.ibb.co.com/hF6Z95xB/12.jpg",
     "category": "Small Animals"
+  },
+
+  {
+    "id": 113,
+    "serviceName": "Snow-Proof Paw Balm Application & Massage",
+    "providerName": "Happy Paws Wellness",
+    "providerEmail": "wellness@happypaws.com",
+    "price": 25,
+    "rating": 4.9,
+    "slotsAvailable": 12,
+    "description": "A protective service focusing on applying organic, pet-safe paw balm to shield pads from ice, salt, and cold asphalt, finished with a relaxing paw massage.",
+    "image": "https://i.ibb.co.com/zhQhXMgy/13.jpg",
+    "category": "Grooming & Health"
+  },
+  {
+    "id": 114,
+    "serviceName": "Seasonal Hydration Monitoring & Plan",
+    "providerName": "Pet Health Advocates",
+    "providerEmail": "hydration@pethadv.org",
+    "price": 60,
+    "rating": 4.7,
+    "slotsAvailable": 6,
+    "description": "A virtual consultation to assess your pet's winter water intake (as thirst often decreases in cold weather) and establish a plan to prevent dehydration.",
+    "image": "https://i.ibb.co.com/0RTFKx1G/14.jpg",
+    "category": "Wellness"
+  },
+  {
+    "id": 115,
+    "serviceName": "Therapeutic Warm Joint Wraps",
+    "providerName": "Senior Comfort Care",
+    "providerEmail": "joints@seniorcc.com",
+    "price": 40,
+    "rating": 4.8,
+    "slotsAvailable": 8,
+    "description": "Application of gentle, heat-retaining wraps to the joints of senior or arthritic pets to soothe stiffness and improve mobility in cold weather.",
+    "image": "https://i.ibb.co.com/FL2gpDjV/15.jpg",
+    "category": "Special Needs"
+  },
+  {
+    "id": 116,
+    "serviceName": "Outdoor Shelter Insulation Upgrade",
+    "providerName": "The Pet Carpenter",
+    "providerEmail": "carpenter@petcraft.net",
+    "price": 150,
+    "rating": 4.6,
+    "slotsAvailable": 3,
+    "description": "On-site service to line existing outdoor dog houses or cat shelters with weather-resistant foam and straw bedding to boost thermal protection.",
+    "image": "https://i.ibb.co.com/hx5WLPgK/16.jpg",
+    "category": "Home Service"
+  },
+  {
+    "id": 117,
+    "serviceName": "Reflective Safety Vest Fitting & Training",
+    "providerName": "Night Walk Safely",
+    "providerEmail": "safety@nightwalks.com",
+    "price": 35,
+    "rating": 5.0,
+    "slotsAvailable": 10,
+    "description": "A fitting session for a high-visibility, reflective winter vest, plus a short training session to ensure the pet is comfortable and safe on dark, winter walks.",
+    "image": "https://i.ibb.co.com/Cyt95WQ/17.jpg",
+    "category": "Safety"
+  },
+  {
+    "id": 118,
+    "serviceName": "Winter Anxiety & Storm Calming Session",
+    "providerName": "Calm Companion Co.",
+    "providerEmail": "calm@companionco.org",
+    "price": 75,
+    "rating": 4.9,
+    "slotsAvailable": 5,
+    "description": "A behavioral consultation focused on reducing anxiety related to winter storms, snow plows, and increased indoor time, offering coping strategies.",
+    "image": "https://i.ibb.co.com/Kx5wq3Wj/18.jpg",
+    "category": "Behavioral"
   }
 ]
