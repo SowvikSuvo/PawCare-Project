@@ -1,11 +1,18 @@
 import React, { use, useState } from "react";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
+import { FaEye } from "react-icons/fa";
+
+import { IoEyeOff } from "react-icons/io5";
 
 const Register = () => {
-  const { createUser, setUser, updateUser } = use(AuthContext);
+  const { createUser, setUser } = use(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [show, setShow] = useState(false);
   const [nameError, setNameError] = useState("");
+  const [passError, setPassError] = useState("");
   const handleRegister = (e) => {
     e.preventDefault();
     console.log(e.target);
@@ -20,12 +27,23 @@ const Register = () => {
     const email = e.target.email?.value;
     const password = e.target.password?.value;
     console.log({ name, photo, email, password });
-    
+
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9]).{6,}$/;
+    if (!regex.test(password)) {
+      setPassError("Please provide valid password");
+      toast.error(
+        "❌ Password must be at least 6 characters long, include at least one uppercase letter, one lowercase letter, and one special character."
+      );
+      return;
+    }
+
     createUser(email, password)
       .then((result) => {
         const user = result.user;
         setUser(user);
+        navigate(`${location.state ? location.state : "/"}`);
         toast.success("Account Created Successfully");
+        e.target.reset();
       })
       .catch((error) => {
         toast.error(error.message);
@@ -75,14 +93,23 @@ const Register = () => {
                 required
               />
               {/* password */}
-              <label className="label">Password</label>
-              <input
-                type="password"
-                name="password"
-                className="input"
-                placeholder="Password"
-                required
-              />
+              <div className="relative">
+                <label className="label">Password</label>
+                <input
+                  type={show ? "text" : "password"}
+                  name="password"
+                  className="input"
+                  placeholder="Password"
+                  required
+                />
+                <span
+                  onClick={() => setShow(!show)}
+                  className="absolute right-[25px] top-[30px] cursor-pointer z-50 "
+                >
+                  {show ? <FaEye></FaEye> : <IoEyeOff></IoEyeOff>}
+                </span>
+              </div>
+              {passError && <p className="text-xs text-error">{passError}</p>}
 
               <button type="submit" className="btn btn-neutral mt-4">
                 Register

@@ -22,6 +22,7 @@ const Login = () => {
         console.log(user);
         navigate(`${location.state ? location.state : "/"}`);
         toast.success("Sign In SuccessFully");
+        e.target.reset();
       })
       .catch((error) => {
         toast.error("User is Invalid please login valid information");
