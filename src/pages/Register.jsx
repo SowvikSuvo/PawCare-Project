@@ -1,12 +1,32 @@
-import React from "react";
+import React, { use } from "react";
 import { Link } from "react-router";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Register = () => {
+  const { createUser, setUser } = use(AuthContext);
+  const handleRegister = (e) => {
+    e.preventDefault();
+    console.log(e.target);
+    const name = e.target.name?.value;
+    const photo = e.target.photo?.value;
+    const email = e.target.email?.value;
+    const password = e.target.password?.value;
+    console.log({ name, photo, email, password });
+    createUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        // console.log(result.user);
+        setUser(user);
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  };
   return (
     <div className="flex justify-center  items-center mt-20">
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
         <div className="card-body">
-          <form>
+          <form onSubmit={handleRegister}>
             <fieldset className="fieldset">
               <div className="text-center">
                 <h2 className="text-2xl font-semibold">
@@ -24,6 +44,7 @@ const Register = () => {
                 name="name"
                 className="input"
                 placeholder="Name"
+                required
               />
               {/* photo Url */}
               <label className="label">Photo</label>
@@ -32,6 +53,7 @@ const Register = () => {
                 name="photo"
                 className="input"
                 placeholder="Photo URL"
+                required
               />
               {/* email */}
               <label className="label">Email</label>
@@ -40,6 +62,7 @@ const Register = () => {
                 name="email"
                 className="input"
                 placeholder="Email"
+                required
               />
               {/* password */}
               <label className="label">Password</label>
@@ -48,6 +71,7 @@ const Register = () => {
                 name="password"
                 className="input"
                 placeholder="Password"
+                required
               />
 
               <button type="submit" className="btn btn-neutral mt-4">
@@ -59,9 +83,9 @@ const Register = () => {
             Already have an account?{" "}
             <Link
               to="/auth/login"
-              className="text-blue-500 hover:text-blue-700 underline"
+              className="text-pink-500 hover:text-pink-700 underline"
             >
-              Login
+              LogIn
             </Link>
           </p>
         </div>

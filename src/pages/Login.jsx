@@ -2,11 +2,18 @@ import React from "react";
 import { Link } from "react-router";
 
 const Login = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const email = e.target.email?.value;
+    const password = e.target.password?.value;
+    console.log({ email, password });
+  };
+
   return (
     <div className="flex justify-center  items-center mt-20">
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
         <div className="card-body">
-          <form>
+          <form onSubmit={handleLogin}>
             <fieldset className="fieldset">
               <div className="text-center">
                 <h2 className="text-2xl font-semibold">
@@ -66,7 +73,7 @@ const Login = () => {
             Don’t have an account?{" "}
             <Link
               to="/auth/register"
-              className="text-blue-500 hover:text-blue-700 underline"
+              className="text-pink-500 hover:text-pink-700 underline"
             >
               Sign up
             </Link>
