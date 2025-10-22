@@ -6,6 +6,8 @@ import MyProfile from "../pages/MyProfile";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import AuthLayout from "../Layout/AuthLayout";
+import ViewDetails from "../pages/ViewDetails";
+import PrivateRoute from "../AuthProvider/PrivateRoute";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -46,6 +48,15 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
     ],
+  },
+  {
+    path: "/view-details/:id",
+    element: (
+      <PrivateRoute>
+        <ViewDetails></ViewDetails>
+      </PrivateRoute>
+    ),
+    loader: () => fetch("/pet.json"),
   },
 ]);
 export default router;

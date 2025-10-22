@@ -1,6 +1,6 @@
 [
   {
-    "serviceId": 101,
+    "id": 101,
     "serviceName": "Paws & Pad Moisturizing Treatment",
     "providerName": "The Happy Paws Spa",
     "providerEmail": "spa@happypaws.com",
@@ -12,7 +12,7 @@
     "category": "Grooming"
   },
   {
-    "serviceId": 102,
+    "id": 102,
     "serviceName": "Seasonal Immunity Booster Checkup",
     "providerName": "VCA Winter Pet Clinic",
     "providerEmail": "clinic@vca-pets.com",
@@ -24,7 +24,7 @@
     "category": "Veterinary"
   },
   {
-    "serviceId": 103,
+    "id": 103,
     "serviceName": "Heated Bed & Blanket Rental",
     "providerName": "Cozy Critters Boarding",
     "providerEmail": "booking@cozycritters.com",
@@ -36,7 +36,7 @@
     "category": "Boarding"
   },
   {
-    "serviceId": 104,
+    "id": 104,
     "serviceName": "Outdoor Salt/Ice Booties Fitting",
     "providerName": "K9 Gear Specialists",
     "providerEmail": "support@k9gear.com",
@@ -48,7 +48,7 @@
     "category": "Clothing"
   },
   {
-    "serviceId": 105,
+    "id": 105,
     "serviceName": "Senior Joint & Arthritis Massage",
     "providerName": "Pet Therapy Wellness Center",
     "providerEmail": "wellness@pettherapy.org",
@@ -60,7 +60,7 @@
     "category": "Therapy"
   },
   {
-    "serviceId": 106,
+    "id": 106,
     "serviceName": "Indoor-Focused Enrichment Class",
     "providerName": "Brainy Beasts Training",
     "providerEmail": "class@brainybeasts.com",
@@ -73,7 +73,7 @@
   },
 
   {
-    "serviceId": 107,
+    "id": 107,
     "serviceName": "De-Icing Agent Removal Grooming",
     "providerName": "Clean Paws & Tails",
     "providerEmail": "grooming@cleanpaw.net",
@@ -85,7 +85,7 @@
     "category": "Grooming"
   },
   {
-    "serviceId": 108,
+    "id": 108,
     "serviceName": "Indoor Treadmill & Play Sessions",
     "providerName": "K9 Energy Outlet",
     "providerEmail": "exercise@k9energy.com",
@@ -97,7 +97,7 @@
     "category": "Exercise"
   },
   {
-    "serviceId": 109,
+    "id": 109,
     "serviceName": "Cold Weather Emergency Transport",
     "providerName": "PetSafe Rapid Response",
     "providerEmail": "emergency@petsaferr.org",
@@ -109,7 +109,7 @@
     "category": "Safety"
   },
   {
-    "serviceId": 110,
+    "id": 110,
     "serviceName": "Pet-Safe Heating Pad Installation",
     "providerName": "Cozy Home Pet Solutions",
     "providerEmail": "install@cozyhomes.net",
@@ -121,7 +121,7 @@
     "category": "Home Service"
   },
   {
-    "serviceId": 111,
+    "id": 111,
     "serviceName": "Winter Weight & Nutrition Consultation",
     "providerName": "Healthy Pet Dietician",
     "providerEmail": "nutrition@healthypet.com",
@@ -133,7 +133,7 @@
     "category": "Wellness"
   },
   {
-    "serviceId": 112,
+    "id": 112,
     "serviceName": "Small Pet Hibernation Habitat Setup",
     "providerName": "Critter Comfort Experts",
     "providerEmail": "smallpet@crittercomfort.com",
