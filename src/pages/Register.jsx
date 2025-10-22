@@ -4,7 +4,7 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
 
 const Register = () => {
-  const { createUser, setUser } = use(AuthContext);
+  const { createUser, setUser, updateUser } = use(AuthContext);
   const [nameError, setNameError] = useState("");
   const handleRegister = (e) => {
     e.preventDefault();
@@ -20,6 +20,7 @@ const Register = () => {
     const email = e.target.email?.value;
     const password = e.target.password?.value;
     console.log({ name, photo, email, password });
+    
     createUser(email, password)
       .then((result) => {
         const user = result.user;
@@ -27,7 +28,7 @@ const Register = () => {
         toast.success("Account Created Successfully");
       })
       .catch((error) => {
-        toast(error.message);
+        toast.error(error.message);
       });
   };
   return (

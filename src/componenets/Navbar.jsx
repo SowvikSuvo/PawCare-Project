@@ -2,6 +2,7 @@ import React, { use } from "react";
 import { Link, NavLink } from "react-router";
 import userImg from "../assets/user.png";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
   const { user, logOut } = use(AuthContext);
@@ -23,7 +24,7 @@ const Navbar = () => {
     console.log("user trying to logout");
     logOut()
       .then(() => {
-        alert("Logged Out Successfully");
+        toast.success("Log Out Successfully");
       })
       .catch((error) => {
         console.log(error.message);
@@ -67,8 +68,12 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end md:mr-30 gap-2">
-          {user && user.email}
-          <img src={userImg} alt="" />
+          {/* {user && user.email} */}
+          <img
+            className="w-12 h-12 rounded-full"
+            src={`${user ? user.photoURL : userImg}`}
+            alt=""
+          />
           {user ? (
             <button onClick={handleLogOut} className="btn btn-primary px-10">
               Log Out

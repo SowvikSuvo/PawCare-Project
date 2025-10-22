@@ -1,6 +1,7 @@
 import React, { use, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const [error, setError] = useState("");
@@ -18,10 +19,10 @@ const Login = () => {
         const user = result.user;
         console.log(user);
         navigate(`${location.state ? location.state : "/"}`);
-        // alert("Sign In SuccessFully");
+        toast.success("Sign In SuccessFully");
       })
       .catch((error) => {
-        // alert(error.message);
+        toast.error("User is Invalid please login valid information");
         setError(error.message);
       });
   };
