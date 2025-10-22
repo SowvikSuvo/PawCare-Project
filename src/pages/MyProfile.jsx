@@ -41,13 +41,13 @@ const MyProfile = () => {
   const handleUpdateProfile = (e) => {
     const name = e.target.name?.value;
     const photo = e.target.photo?.value;
-
     e.preventDefault();
+
     updateUser({ displayName: name, photoURL: photo })
-      .then((result) => {
-        const user = result.user;
+      .then(() => {
         setUser({ ...user, displayName: name, photoURL: photo });
         toast.success("Profile Updated Successfully");
+        e.target.reset();
       })
       .catch((error) => {
         console.log(error);
@@ -90,6 +90,7 @@ const MyProfile = () => {
             <input
               type="text"
               name="name"
+              required
               placeholder="Enter your name"
               className="input input-bordered w-full focus:border-pink-500"
             />
@@ -103,6 +104,7 @@ const MyProfile = () => {
             <input
               type="text"
               name="photo"
+              required
               placeholder="Enter your photo URL"
               className="input input-bordered w-full focus:border-pink-500"
             />
@@ -116,12 +118,13 @@ const MyProfile = () => {
             >
               Update Profile
             </button>
-            <button
+            <Link
+              to={"/"}
               type="button"
               className="btn btn-outline border-pink-500 text-pink-600 hover:bg-pink-50 rounded-xl"
             >
               Cancel
-            </button>
+            </Link>
           </div>
         </form>
       </div>
