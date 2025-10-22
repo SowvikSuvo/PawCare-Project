@@ -3,7 +3,6 @@ import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
 import { FaEye } from "react-icons/fa";
-
 import { IoEyeOff } from "react-icons/io5";
 
 const Register = () => {

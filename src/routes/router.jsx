@@ -8,7 +8,13 @@ import Register from "../pages/Register";
 import AuthLayout from "../Layout/AuthLayout";
 import ViewDetails from "../pages/ViewDetails";
 import PrivateRoute from "../AuthProvider/PrivateRoute";
+import ForgetPassword from "../pages/ForgetPassword";
+import ErrorPage from "../pages/ErrorPage";
 const router = createBrowserRouter([
+  {
+    path: "*",
+    element: <ErrorPage></ErrorPage>,
+  },
   {
     path: "/",
     element: <HomeLayout></HomeLayout>,
@@ -47,8 +53,13 @@ const router = createBrowserRouter([
         path: "/auth/register",
         element: <Register></Register>,
       },
+      {
+        path: "/auth/forget-password",
+        element: <ForgetPassword></ForgetPassword>,
+      },
     ],
   },
+
   {
     path: "/view-details/:id",
     element: (

@@ -1,13 +1,18 @@
-import React, { use, useState } from "react";
+import React, { use, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
+import { FaEye } from "react-icons/fa";
+
+import { IoEyeOff } from "react-icons/io5";
 
 const Login = () => {
   const [error, setError] = useState("");
   const { LogIn } = use(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
+  const [show, setShow] = useState(false);
+  const emailRef = useRef();
   console.log(location);
 
   console.log(location);
@@ -29,6 +34,17 @@ const Login = () => {
         setError(error.message);
       });
   };
+  // const handleForgetPassword = () => {
+  //   const email = emailRef.current?.value;
+  //   console.log("forget password", email);
+  //   resetPassword(email)
+  //     .then(() => {
+  //       toast.success("Please Check your email");
+  //     })
+  //     .catch((error) => {
+  //       toast.error(error.message);
+  //     });
+  // };
 
   return (
     <div className="flex justify-center  items-center mt-20">
@@ -48,6 +64,7 @@ const Login = () => {
               {/* email */}
               <label className="label">Email</label>
               <input
+                ref={emailRef}
                 type="email"
                 name="email"
                 className="input"
@@ -56,17 +73,30 @@ const Login = () => {
               />
 
               {/* password */}
-              <label className="label">Password</label>
-              <input
-                type="password"
-                name="password"
-                className="input"
-                placeholder="Password"
-                required
-              />
-              <div>
-                <a className="link link-hover">Forgot password?</a>
+              <div className="relative">
+                <label className="label">Password</label>
+                <input
+                  type={show ? "text" : "password"}
+                  name="password"
+                  className="input"
+                  placeholder="Password"
+                  required
+                />
+
+                <span
+                  onClick={() => setShow(!show)}
+                  className="absolute right-[25px] top-[30px] cursor-pointer z-50 "
+                >
+                  {show ? <FaEye></FaEye> : <IoEyeOff></IoEyeOff>}
+                </span>
               </div>
+              <Link
+                to="/auth/forget-password"
+                state={{ email: emailRef.current?.value }}
+                className="link link-hover"
+              >
+                Forgot password?
+              </Link>
 
               {error && <p className="text-red-500 text-xs">{error}</p>}
               <button type="submit" className="btn btn-neutral mt-4">
