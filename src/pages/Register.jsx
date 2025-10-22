@@ -1,13 +1,21 @@
-import React, { use } from "react";
+import React, { use, useState } from "react";
 import { Link } from "react-router";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Register = () => {
   const { createUser, setUser } = use(AuthContext);
+  const [nameError, setNameError] = useState("");
   const handleRegister = (e) => {
     e.preventDefault();
     console.log(e.target);
     const name = e.target.name?.value;
+    if (name.length < 5) {
+      setNameError("Name should be more then 5 character");
+      return;
+    } else {
+      setNameError("");
+    }
     const photo = e.target.photo?.value;
     const email = e.target.email?.value;
     const password = e.target.password?.value;
@@ -15,11 +23,11 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         const user = result.user;
-        // console.log(result.user);
         setUser(user);
+        toast.success("Account Created Successfully");
       })
       .catch((error) => {
-        alert(error.message);
+        toast(error.message);
       });
   };
   return (
@@ -46,6 +54,7 @@ const Register = () => {
                 placeholder="Name"
                 required
               />
+              {nameError && <p className="text-xs text-error">{nameError}</p>}
               {/* photo Url */}
               <label className="label">Photo</label>
               <input
