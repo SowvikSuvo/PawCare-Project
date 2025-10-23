@@ -1,16 +1,60 @@
-# React + Vite
+1. Project name:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+   WarmPaws – Pet Care in Winter
 
-Currently, two official plugins are available:
+2. Live link:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+3. Project purpose:
 
-## React Compiler
+   PawCare is a pet care service web application built with React, Firebase, DaisyUI, and Tailwind CSS.
+   It allows pet owners to explore winter care services, book appointments, and manage authentication securely.
+   The application features Google Login, Private Routes, and a smooth user experience with a persistent navbar and footer.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+4. Key features:
 
-## Expanding the ESLint configuration
+   🏠 Home Page-
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+   Warm winter-themed hero slider built with Swiper.js
+   Popular Winter Services — cards dynamically loaded from JSON data
+   Winter Care Tips — static section for pet care advice
+   Meet Our Expert Vets — introduction of professional vets
+   Additional section: Customer Testimonials
+
+   🔐 Authentication (Firebase)-
+
+   Email & Password Login / SignUp
+   Google Social Login
+   Password Reset (Forget Password)
+   Update Profile feature (Name & Photo)
+   Protected Routes for service details
+
+   🧾 Service Details Page-
+
+   Accessible only to logged-in users
+   Displays complete service info
+   Includes a Book Service Modal (Name, Email, Submit)
+
+   👤 My Profile Page-
+
+   Shows user details (Name, Email, Photo)
+   Update profile option using Firebase updateProfile()
+
+   🧭 Persistent Layout-
+
+   Sticky Navbar and Footer
+   Fully responsive and mobile-friendly
+
+5. Package Install:
+
+   react
+   react-hot-toast
+   react-type-animation
+   react-toastify
+   swiper
+   react-router
+   animate.css
+   firebase
+   react-dom
+   react-icons
+   daisyUi
+   tailwind-CSS

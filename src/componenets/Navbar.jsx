@@ -1,4 +1,5 @@
 import React, { use, useState } from "react";
+import pawImg from "../assets/paw.png";
 import { Link, NavLink } from "react-router";
 import userImg from "../assets/user.png";
 import { AuthContext } from "../AuthProvider/AuthProvider";
@@ -33,7 +34,7 @@ const Navbar = () => {
   };
 
   return (
-    <div>
+    <div className="pb-5">
       <div className="navbar bg-base-100 shadow-sm mx-auto">
         <div className="navbar-start ">
           <div className="dropdown">
@@ -61,14 +62,14 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <Link to={"/"} className="text-xl font-semibold md:ml-30">
-            🐾 PawCare
+          <Link to={"/"} className="text-xl font-semibold md:ml-20">
+            <img className="w-50 " src={pawImg} alt="" />
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
-        <div className="navbar-end md:mr-30 gap-2 ">
+        <div className="navbar-end md:mr-20 gap-2 ">
           {/* {user && user.email} */}
           <Link
             to={"/profile"}
