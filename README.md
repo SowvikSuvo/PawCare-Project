@@ -2,7 +2,11 @@
 
    WarmPaws – Pet Care in Winter
 
+   
+
 2. Live link:
+
+
 
 3. Project purpose:
 
@@ -18,6 +22,8 @@
 
    It allows pet owners to explore winter care services, book appointments, and manage authentication securely.
    The application features Google Login, Private Routes, and a smooth user experience with a persistent navbar and footer.
+
+
 
 4. Key features:
 
@@ -64,6 +70,8 @@
    Sticky Navbar and Footer,
 
    Fully responsive and mobile-friendly,
+
+
 
 5. Package Install:
 
