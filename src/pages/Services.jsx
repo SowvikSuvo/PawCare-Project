@@ -4,7 +4,7 @@ import ServiceCard from "../componenets/ServiceCard";
 
 const Services = () => {
   const data = useLoaderData();
-  console.log(data);
+  // console.log(data);
 
   return (
     <div className="mt-5 ">

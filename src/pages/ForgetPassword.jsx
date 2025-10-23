@@ -1,6 +1,6 @@
 import React, { use, useEffect, useRef } from "react";
 import Navbar from "../componenets/Navbar";
-import { Outlet, useLocation } from "react-router";
+import { Link, Outlet, useLocation } from "react-router";
 import Footer from "../componenets/Footer";
 import { toast } from "react-toastify";
 import { AuthContext } from "../AuthProvider/AuthProvider";
@@ -29,13 +29,7 @@ const ForgetPassword = () => {
         toast.success(
           "📩 Reset link on its way! Check your Gmail inbox or spam folder."
         );
-        setTimeout(() => {
-          window.open(
-            "https://mail.google.com",
-            "_blank",
-            "noopener,noreferrer"
-          );
-        }, 1200);
+
         e.target.reset();
       })
       .catch((error) => {
@@ -77,12 +71,12 @@ const ForgetPassword = () => {
           </form>
 
           <div className="text-center mt-4">
-            <a
-              href="/auth/login"
+            <Link
+              to="/auth/login"
               className="text-sm btn outline text-indigo-600 hover:underline"
             >
-               Back to Login
-            </a>
+              Back to Login
+            </Link>
           </div>
         </div>
       </div>

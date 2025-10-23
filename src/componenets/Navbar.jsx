@@ -23,13 +23,13 @@ const Navbar = () => {
   );
 
   const handleLogOut = () => {
-    console.log("user trying to logout");
+    // console.log("user trying to logout");
     logOut()
       .then(() => {
         toast.success("Log Out Successfully");
       })
       .catch((error) => {
-        console.log(error.message);
+        toast.error(error.message);
       });
   };
 

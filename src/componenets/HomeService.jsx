@@ -7,7 +7,7 @@ import VetsSection from "./VetsSection ";
 const HomeService = () => {
   const loader = useLoaderData();
   const features = loader.slice(0, 6);
-  console.log(loader);
+  // console.log(loader);
 
   return (
     <div className="mt-5 ">

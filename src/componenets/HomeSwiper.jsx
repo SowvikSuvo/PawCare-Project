@@ -28,16 +28,28 @@ const HomeSwiper = () => {
   return (
     <>
       <TypeAnimation
-        className="text-center text-secondary font-semibold text-lg container ml-30 mx-auto "
+        className=" flex justify-center items-center text-center text-secondary font-semibold text-lg container mx-auto "
         sequence={[
           // Same substring at the start will only be typed once, initially
-          "🐾pets in cozy outfits🐾",
+          "🐾pets in cozy outfits.🐾",
           1000,
-          "tiny scarves and booties neat",
+          "tiny scarves and booties neat.💜",
           1000,
-          "They watch the falling winter snow",
+          "They watch the falling winter snow.",
+          1000,
+          "PawCare — Where Every Tail Tells a Story!",
+          1000,
+          "More Love. More Care. More Paws.💙",
+          1000,
+          "Gentle Hands for Happy Paws.💚",
           1000,
           "Our furry friends are warm and sweet. 🐾",
+          1000,
+          "Professional Care, Personal Touch.",
+          1000,
+          "Your Pet’s Health, Our Priority.",
+          1000,
+          "Because Every Paw Deserves Care.🧡",
           1000,
         ]}
         speed={50}

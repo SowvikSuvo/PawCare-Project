@@ -13,18 +13,17 @@ const Login = () => {
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
   const emailRef = useRef();
-  console.log(location);
+  // console.log(location);
 
-  console.log(location);
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email?.value;
     const password = e.target.password?.value;
-    console.log({ email, password });
+    // console.log({ email, password });
     LogIn(email, password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
+
         navigate(`${location.state ? location.state : "/"}`);
         toast.success("Sign In SuccessFully");
         e.target.reset();
@@ -38,7 +37,7 @@ const Login = () => {
   const handleGoogleSignin = () => {
     googleSignIn()
       .then((result) => {
-        console.log(result.user);
+        // console.log(result.user);
         navigate(`${location.state ? location.state : "/"}`);
         toast.success("Sign In with Google SuccessFully");
         const loggedInUser = result.user;

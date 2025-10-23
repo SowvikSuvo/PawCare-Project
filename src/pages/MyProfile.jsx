@@ -10,9 +10,9 @@ const MyProfile = () => {
   if (!user) {
     return (
       <div>
-        <div className="flex justify-center items-center text-gray-600 text-2xl font-semibold mt-80">
+        <div className="flex justify-center items-center text-gray-600 text-2xl font-semibold mt-80 ">
           <TypeAnimation
-            className="text-center text-secondary font-semibold text-lg mx-auto "
+            className="text-center text-3xl md:text-4xl font-bold text-center bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent drop-shadow-sm font-semibold text-lg mx-auto "
             sequence={[
               // Same substring at the start will only be typed once, initially
               "Please login to view your profile.",
@@ -50,16 +50,16 @@ const MyProfile = () => {
         e.target.reset();
       })
       .catch((error) => {
-        console.log(error);
+        toast.error(error.message);
         setUser(user);
       });
   };
   return (
-    <div className=" bg-gradient-to-b from-pink-100 to-white flex items-center justify-center px-4 py-8">
+    <div className=" bg-gradient-to-b from-pink-200 to-white rounded-xl flex items-center justify-center px-4 py-8">
       <div className="w-full max-w-md bg-base-100 shadow-xl rounded-2xl p-8 border border-gray-100">
         {/* Title */}
         <h2 className="text-3xl font-bold text-center text-pink-600 mb-6">
-          🐾 Update Your Profile
+          🐾Update Your Profile🐾
         </h2>
 
         {/* Current Avatar */}

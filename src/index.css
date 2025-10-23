@@ -20,5 +20,5 @@
 }
 
 a.active {
-  @apply bg-emerald-500 text-lg;
+  @apply hover:scale-105 text-lg bg-gradient-to-r from-indigo-500 via-sky-400 to-emerald-400 hover:opacity-90 text-white;
 }

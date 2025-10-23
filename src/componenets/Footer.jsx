@@ -1,15 +1,15 @@
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import pawImg from "../assets/paw.png";
 
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-sky-400 via-blue-200 to-indigo-100 text-gray-900 mt-10 border-t border-gray-200">
       <div className="container mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* --- logo --- */}
-        <div>
-          <h2 className="text-lg font-semibold text-indigo-600 mb-3">
-            🐾 PawCare
-          </h2>
-          <p className="text-sm">
+        <div className="">
+          <img className="w-50 " src={pawImg} alt="" />
+
+          <p className="text-sm text-left">
             Caring Beyond Seasons — Always for Your Pets
           </p>
         </div>
@@ -52,10 +52,9 @@ const Footer = () => {
             Contact Us
           </h2>
           <p className="text-sm">
-            PawCare <br />
+            PawCare Office <br />
             Barisal, Bangladesh <br />
-            <span className="font-medium">Email:</span> support@pawcare.com{" "}
-            <br />
+            <span className="font-medium">Email:</span> skarmoker44@.com <br />
             <span className="font-medium">Phone:</span> +880 1768225209
           </p>
         </div>
@@ -63,7 +62,7 @@ const Footer = () => {
         {/* --- Social Links --- */}
         <div className="">
           <h2 className="text-lg font-semibold text-indigo-600 mb-3">
-            🌐 Connect With Us
+            Connect With Us
           </h2>
           <div className="text-center  text-xl">
             <a
