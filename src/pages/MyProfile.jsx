@@ -73,8 +73,13 @@ const MyProfile = () => {
           <p className="mt-2 mb-4 text-gray-600 text-sm">
             Change your display info
           </p>
-
-          <div className="text-center space-y-1 ">
+          {/* name */}
+          <div className="text-center mb-3">
+            <p className="text-gray-600 text-xs font-medium">Your Name</p>
+            {user && <p>{user.displayName}</p>}
+          </div>
+          {/* email */}
+          <div className="text-center  ">
             <p className="text-gray-600 text-xs font-medium">Your Email</p>
             {user && <p>{user.email}</p>}
           </div>
@@ -91,7 +96,7 @@ const MyProfile = () => {
               type="text"
               name="name"
               required
-              placeholder="Enter your name"
+              placeholder="Update your name"
               className="input input-bordered w-full focus:border-pink-500"
             />
           </div>
@@ -105,7 +110,7 @@ const MyProfile = () => {
               type="text"
               name="photo"
               required
-              placeholder="Enter your photo URL"
+              placeholder="Update your photo URL"
               className="input input-bordered w-full focus:border-pink-500"
             />
           </div>

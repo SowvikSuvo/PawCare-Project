@@ -61,7 +61,7 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <Link to={"/"} className="text-xl md:ml-30">
+          <Link to={"/"} className="text-xl font-semibold md:ml-30">
             🐾 PawCare
           </Link>
         </div>
@@ -70,21 +70,22 @@ const Navbar = () => {
         </div>
         <div className="navbar-end md:mr-30 gap-2 ">
           {/* {user && user.email} */}
-          <div
+          <Link
+            to={"/profile"}
             className="relative w-10 h-10 group"
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
           >
             {/* Hover Display Name */}
-            <span className="absolute -left-26 top-1 bg-gray-800 text-white text-sm py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
-              {user?.displayName}
+            <span className="absolute -left-24 top-1 bg-gray-800 text-white text-sm py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
+              {user ? user?.displayName : "Click me"}
             </span>
             <img
               className="w-10 h-10 rounded-full cursor-pointer border-2 border-pink-500 "
               src={`${user ? user.photoURL : userImg}`}
               alt=""
             />
-          </div>
+          </Link>
 
           <div>
             {user ? (
