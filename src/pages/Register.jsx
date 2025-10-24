@@ -44,8 +44,11 @@ const Register = () => {
         toast.success("Account Created Successfully");
         e.target.reset();
       })
-      .catch((error) => {
-        toast.error(error.message);
+      .catch(() => {
+        // console.log(error.message);
+        toast.error(
+          "It looks like you already have an account! Try logging in, or click 'Forgot Password?' if you need help accessing it."
+        );
       });
   };
   return (
