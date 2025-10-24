@@ -28,7 +28,7 @@ const HomeSwiper = () => {
   return (
     <>
       <TypeAnimation
-        className=" flex justify-center items-center text-center text-secondary font-semibold text-lg container mx-auto "
+        className=" flex justify-center items-center text-center text-secondary font-semibold text-xs md:text-lg container mx-auto "
         sequence={[
           // Same substring at the start will only be typed once, initially
           "🐾pets in cozy outfits.🐾",
@@ -53,17 +53,21 @@ const HomeSwiper = () => {
           1000,
         ]}
         speed={50}
-        style={{ fontSize: "2em" }}
+        style={{
+          fontSize: "2em",
+          minHeight: "3.5em",
+          lineHeight: "1.3em",
+        }}
         repeat={Infinity}
       />
       <h2 className="text-center text-secondary font-semibold text-lg "></h2>
-      <h2 className="text-center relative flex justify-center items-center mb-5 mt-2">
+      <h2 className="text-center relative flex justify-center items-center  mt-2">
         <FaLongArrowAltLeft className="absolute mr-20"></FaLongArrowAltLeft>{" "}
         Swipe{" "}
         <FaLongArrowAltRight className="absolute ml-20"></FaLongArrowAltRight>
       </h2>
       <div className="flex justify-center items-center container mx-auto  ">
-        <Swiper className="mySwiper">
+        <Swiper className="mySwiper ">
           <SwiperSlide>
             <img className="w-100 h-60 mx-auto rounded-lg" src={pet1} alt="" />
           </SwiperSlide>

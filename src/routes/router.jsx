@@ -10,6 +10,7 @@ import ViewDetails from "../pages/ViewDetails";
 import PrivateRoute from "../AuthProvider/PrivateRoute";
 import ForgetPassword from "../pages/ForgetPassword";
 import ErrorPage from "../pages/ErrorPage";
+import Loading from "../pages/Loading";
 const router = createBrowserRouter([
   {
     path: "*",
@@ -23,17 +24,13 @@ const router = createBrowserRouter([
         path: "",
         element: <Home></Home>,
         loader: () => fetch("/pet.json"),
-        hydrateFallbackElement: (
-          <span className="loading loading-spinner text-warning"></span>
-        ),
+        hydrateFallbackElement: <Loading></Loading>,
       },
       {
         path: "/services",
         element: <Services></Services>,
         loader: () => fetch("/pet.json"),
-        hydrateFallbackElement: (
-          <span className="loading loading-spinner text-warning"></span>
-        ),
+        hydrateFallbackElement: <Loading></Loading>,
       },
       {
         path: "/profile",

@@ -30,7 +30,7 @@ const ViewDetails = () => {
         <div className="flex justify-center items-center ">
           <Link
             to={"/services"}
-            className="btn mt-5 bg-green-500 text-white hover:scale-105 transition ease-in-out bg-gradient-to-r from-orange-600 via-pink-600 to-sky-500"
+            className="btn mt-5 bg-green-500 text-white rounded-xl hover:scale-105 transition ease-in-out bg-gradient-to-r from-orange-600 via-pink-600 to-sky-500"
           >
             Back to Services
           </Link>

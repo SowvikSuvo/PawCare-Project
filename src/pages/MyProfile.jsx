@@ -10,27 +10,30 @@ const MyProfile = () => {
   if (!user) {
     return (
       <div>
-        <div className="flex justify-center items-center text-gray-600 text-2xl font-semibold mt-80 ">
+        <div className="flex justify-center items-center text-gray-600  md:text-2xl font-semibold md:mt-50 sm:mb-10 min-h-[120px] sm:min-h-[100px]">
           <TypeAnimation
-            className="text-center text-3xl md:text-4xl font-bold text-center bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent drop-shadow-sm font-semibold text-lg mx-auto "
+            className="text-center text-xl md:text-4xl font-bold text-center bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent drop-shadow-sm font-semibold  mx-auto "
             sequence={[
               // Same substring at the start will only be typed once, initially
-              "Please login to view your profile.",
+              "Welcome back! Log in to see your profile.",
               1000,
-              "Please login first to view your profile.",
+              "Please Log in to explore your profile!",
               1000,
-              "Please login to view your profile.",
+              "Welcome back! Log in to see your profile.",
               1000,
-              "Please login to view your profile.",
+              "Please Log in to explore your profile!",
               1000,
             ]}
             speed={50}
-            style={{ fontSize: "2em" }}
+            style={{ fontSize: "2em", minHeight: "3.5em", lineHeight: "1.3em" }}
             repeat={Infinity}
           />{" "}
         </div>
-        <div className="flex justify-center items-center mt-5 ">
-          <Link to="/auth/login" className="btn btn-secondary  ">
+        <div className="flex justify-center items-center   sticky">
+          <Link
+            to="/auth/login"
+            className="btn bg-pink-600 hover:bg-pink-700 text-white font-semibold rounded-md  "
+          >
             Log In
           </Link>
         </div>

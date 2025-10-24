@@ -22,7 +22,7 @@ const HomeService = () => {
       <div className="flex justify-center mb-2">
         <Link
           to={"/services"}
-          className="btn bg-red-500 text-white bg-gradient-to-r from-red-500 via-yellow-600 to-blue-500 hover:scale-105 transition ease-in-out"
+          className="btn bg-red-500 text-white rounded-full bg-gradient-to-r from-red-500 via-yellow-600 to-blue-500 hover:scale-105 transition ease-in-out"
         >
           See All Services
         </Link>

@@ -1,5 +1,6 @@
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import pawImg from "../assets/paw.png";
+import { Link } from "react-router";
 
 const Footer = () => {
   return (
@@ -20,6 +21,19 @@ const Footer = () => {
             Quick Links
           </h2>
           <ul className="text-sm space-y-2">
+            <li>
+              <Link to="/" className="hover:text-indigo-600 transition-colors">
+                Home Page
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/services"
+                className="hover:text-indigo-600 transition-colors"
+              >
+                All services
+              </Link>
+            </li>
             <li>
               <a
                 href="/privacy-policy"
