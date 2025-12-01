@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router";
 import { toast } from "react-toastify";
+import { motion } from "framer-motion";
 
 const ViewDetailsCard = ({ views }) => {
   const [showModal, setShowModal] = useState(false);
@@ -24,69 +25,100 @@ const ViewDetailsCard = ({ views }) => {
     image,
     category,
   } = views;
+
+  const cardVariant = {
+    hidden: { opacity: 0, y: 50, rotateY: -10 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      rotateY: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
+  const imageVariant = {
+    hover: { scale: 1.05, rotateY: 5, transition: { duration: 0.5 } },
+  };
+
   return (
-    <div className="max-w-md mx-auto bg-base-100 h-full shadow-xl rounded-2xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300">
+    <motion.div
+      variants={cardVariant}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="max-w-5xl h-150 mx-auto bg-base-100 shadow-xl rounded-2xl overflow-hidden border border-gray-200 hover:shadow-2xl transition-all duration-300 flex flex-col md:flex-row"
+    >
       {/* Image Section */}
-      <figure className="relative">
+      <motion.figure
+        className="md:w-1/2 h-64 md:h-auto relative overflow-hidden"
+        whileHover="hover"
+        variants={imageVariant}
+      >
         <img
           src={image}
-          alt="Paws & Pad Moisturizing Treatment"
-          className="w-full h-60 object-cover"
+          loading="lazy"
+          alt={serviceName}
+          className="w-full h-full object-cover rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none"
         />
         <span className="absolute top-3 right-3 bg-pink-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
           {category}
         </span>
-      </figure>
+      </motion.figure>
 
       {/* Details Section */}
-      <div className="p-6 space-y-3">
-        <h2 className="text-2xl font-bold text-gray-800">{serviceName}</h2>
-        <p className="text-sm text-gray-600">
-          <span className="font-semibold text-gray-700">Provider: </span>{" "}
-          {providerName}
-        </p>
-        <p className="text-sm text-gray-600">
-          <span className="font-semibold text-gray-700">Email: </span>{" "}
-          {providerEmail}
-        </p>
+      <div className="md:w-1/2 p-6 flex flex-col justify-between space-y-3">
+        <div>
+          <h2 className="text-3xl font-bold text-orange-500 mb-2">
+            {serviceName}
+          </h2>
+          <p className="text-gray-700 text-sm">
+            <span className="font-semibold text-gray-800">Provider: </span>{" "}
+            {providerName}
+          </p>
+          <p className="text-gray-700 text-sm mb-2">
+            <span className="font-semibold text-gray-800">Email:</span>{" "}
+            {providerEmail}
+          </p>
 
-        {/* Rating & Price */}
-        <div className="flex justify-between items-center mt-2">
-          <div className="flex text-yellow-500">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              className="w-5 h-5"
-            >
-              <path d="M12 .587l3.668 7.431L24 9.587l-6 5.847 1.417 8.252L12 18.902 4.583 23.686 6 15.434 0 9.587l8.332-1.569z" />
-            </svg>
-            <span className="ml-1 text-gray-700 font-medium">{rating} / 5</span>
+          {/* Rating & Price */}
+          <div className="flex justify-between items-center mt-5">
+            <div className="flex text-yellow-500 items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                className="w-5 h-5"
+              >
+                <path d="M12 .587l3.668 7.431L24 9.587l-6 5.847 1.417 8.252L12 18.902 4.583 23.686 6 15.434 0 9.587l8.332-1.569z" />
+              </svg>
+              <span className="ml-1 text-gray-700 font-medium">
+                {rating} / 5
+              </span>
+            </div>
+            <p className="text-pink-600 text-lg font-semibold">${price}</p>
           </div>
-          <p className="text-pink-600 text-lg font-semibold">${price}</p>
+
+          <p className="text-gray-700 leading-relaxed mt-2 md:mt-15">
+            {description}
+          </p>
+          <p className="text-sm text-gray-500 mt-15">
+            <span className="font-semibold">Available Slots:</span>{" "}
+            {slotsAvailable}
+          </p>
         </div>
 
-        {/* Description */}
-        <p className="text-gray-700 leading-relaxed">{description}</p>
-
-        {/* Slots */}
-        <p className="text-sm text-gray-500">
-          <span className="font-semibold">Available Slots: </span>
-          {slotsAvailable}
-        </p>
-
-        {/* Button */}
-        <div className="pt-4">
+        {/* Sticky Booking Button */}
+        <div className="pt-4 md:sticky md:bottom-4">
           <Link
             onClick={() => setShowModal(true)}
-            className="btn w-full bg-pink-600 hover:bg-pink-700 text-white text-sm font-semibold rounded-xl"
+            className="btn w-full bg-pink-600 hover:bg-pink-700 text-white text-sm font-semibold rounded-xl transform transition-transform duration-300 hover:scale-105"
           >
             Book Now
           </Link>
         </div>
       </div>
 
-      {/* DaisyUI Modal */}
+      {/* Modal */}
       {showModal && (
         <dialog open className="modal modal-bottom sm:modal-middle">
           <div className="modal-box">
@@ -114,7 +146,6 @@ const ViewDetailsCard = ({ views }) => {
                   setFormData({ ...formData, email: e.target.value })
                 }
               />
-
               <button
                 type="submit"
                 className="btn bg-pink-600 hover:bg-pink-700 text-white w-full"
@@ -122,7 +153,6 @@ const ViewDetailsCard = ({ views }) => {
                 Submit
               </button>
             </form>
-
             <div className="modal-action">
               <button
                 onClick={() => setShowModal(false)}
@@ -134,7 +164,7 @@ const ViewDetailsCard = ({ views }) => {
           </div>
         </dialog>
       )}
-    </div>
+    </motion.div>
   );
 };
 

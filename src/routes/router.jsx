@@ -11,6 +11,9 @@ import PrivateRoute from "../AuthProvider/PrivateRoute";
 import ForgetPassword from "../pages/ForgetPassword";
 import ErrorPage from "../pages/ErrorPage";
 import Loading from "../pages/Loading";
+import BlogsPage from "../pages/Blogs/Blogs";
+import AboutUs from "../pages/AboutUs";
+import Contact from "../pages/Contact";
 const router = createBrowserRouter([
   {
     path: "*",
@@ -36,6 +39,18 @@ const router = createBrowserRouter([
         path: "/profile",
         element: <MyProfile></MyProfile>,
       },
+      {
+        path: "/blogs",
+        Component: BlogsPage,
+      },
+      {
+        path: "/about",
+        Component: AboutUs,
+      },
+      {
+        path: "/contact",
+        Component: Contact,
+      },
     ],
   },
   {
@@ -59,11 +74,7 @@ const router = createBrowserRouter([
 
   {
     path: "/view-details/:id",
-    element: (
-      <PrivateRoute>
-        <ViewDetails></ViewDetails>
-      </PrivateRoute>
-    ),
+    element: <ViewDetails></ViewDetails>,
     loader: () => fetch("/pet.json"),
   },
 ]);

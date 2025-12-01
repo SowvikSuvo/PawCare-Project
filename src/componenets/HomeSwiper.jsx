@@ -1,6 +1,13 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade, Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/pagination";
+
 import pet1 from "../assets/cozyPets/1.jpeg";
 import pet2 from "../assets/cozyPets/2.jpeg";
 import pet3 from "../assets/cozyPets/3.jpeg";
@@ -17,107 +24,85 @@ import pet13 from "../assets/cozyPets/13.jpeg";
 import pet14 from "../assets/cozyPets/14.jpeg";
 import pet15 from "../assets/cozyPets/15.jpeg";
 import pet16 from "../assets/cozyPets/16.jpeg";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
-import "animate.css";
-import "swiper/css";
-import "./HomeSwiper";
+
+const images = [
+  pet1,
+  pet11,
+  pet2,
+  pet13,
+  pet3,
+  pet12,
+  pet6,
+  pet7,
+  pet8,
+  pet9,
+  pet10,
+  pet14,
+  pet5,
+  pet4,
+  pet15,
+  pet16,
+];
 
 const HomeSwiper = () => {
   return (
     <>
+      {/* ---- Animated Heading ---- */}
       <TypeAnimation
-        className=" flex justify-center items-center text-center text-secondary font-semibold text-xs md:text-lg container mx-auto "
+        className="flex justify-center items-center text-center text-secondary font-semibold text-xs sm:text-sm md:text-lg lg:text-xl container mx-auto px-2"
         sequence={[
-          // Same substring at the start will only be typed once, initially
-          "🐾pets in cozy outfits.🐾",
+          "🐾 pets in cozy outfits 🐾",
           1000,
-          "tiny scarves and booties neat.💜",
+          "tiny scarves and booties neat 💜",
           1000,
-          "They watch the falling winter snow.",
+          "They watch the falling winter snow ❄️",
           1000,
           "PawCare — Where Every Tail Tells a Story!",
           1000,
-          "More Love. More Care. More Paws.💙",
+          "More Love. More Care. More Paws 💙",
           1000,
-          "Gentle Hands for Happy Paws.💚",
+          "Gentle Hands for Happy Paws 💚",
           1000,
-          "Our furry friends are warm and sweet. 🐾",
-          1000,
-          "Professional Care, Personal Touch.",
-          1000,
-          "Your Pet’s Health, Our Priority.",
-          1000,
-          "Because Every Paw Deserves Care.🧡",
+          "Because Every Paw Deserves Care 🧡",
           1000,
         ]}
-        speed={50}
-        style={{
-          fontSize: "2em",
-          minHeight: "3.5em",
-          lineHeight: "1.3em",
-        }}
+        speed={55}
+        style={{ fontSize: "2em", minHeight: "3.5em", lineHeight: "1.3em" }}
         repeat={Infinity}
       />
-      <h2 className="text-center text-secondary font-semibold text-lg "></h2>
-      <h2 className="text-center relative flex justify-center items-center  mt-2">
-        <FaLongArrowAltLeft className="absolute mr-20"></FaLongArrowAltLeft>{" "}
-        Swipe{" "}
-        <FaLongArrowAltRight className="absolute ml-20"></FaLongArrowAltRight>
+
+      {/* ---- Swipe Indicator ---- */}
+      <h2 className="text-center flex justify-center items-center mt-4 gap-4 text-secondary">
+        <FaLongArrowAltLeft /> Swipe <FaLongArrowAltRight />
       </h2>
-      <div className="flex justify-center items-center container mx-auto  ">
-        <Swiper className="mySwiper ">
-          <SwiperSlide>
-            <img className="w-100 h-60 mx-auto rounded-lg" src={pet1} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="w-100 h-60 mx-auto rounded-lg" src={pet11} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="w-100 h-60 mx-auto rounded-lg" src={pet2} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="w-100 h-60 mx-auto rounded-lg" src={pet13} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="w-100 h-60 mx-auto rounded-lg" src={pet3} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="w-100 h-60 mx-auto rounded-lg" src={pet12} alt="" />
-          </SwiperSlide>
 
-          <SwiperSlide>
-            <img className="w-100 h-60 mx-auto rounded-lg" src={pet6} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="w-100 h-60 mx-auto rounded-lg" src={pet7} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="w-100 h-60 mx-auto rounded-lg" src={pet8} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="w-100 h-60 mx-auto rounded-lg" src={pet9} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="w-100 h-60 mx-auto rounded-lg" src={pet10} alt="" />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <img className="w-100 h-60 mx-auto rounded-lg" src={pet14} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="w-100 h-60 mx-auto rounded-lg" src={pet5} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="w-100 h-60 mx-auto rounded-lg" src={pet4} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="w-100 h-60 mx-auto rounded-lg" src={pet15} alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img className="w-100 h-60 mx-auto rounded-lg" src={pet16} alt="" />
-          </SwiperSlide>
+      {/* ---- Swiper Section ---- */}
+      <div className="w-full overflow-hidden mt-4">
+        <Swiper
+          modules={[Autoplay, EffectFade, Pagination]}
+          effect="fade"
+          loop={true}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          speed={1000}
+          fadeEffect={{ crossFade: true }}
+          slidesPerView={1} // single image
+          pagination={{ clickable: true, dynamicBullets: true }}
+        >
+          {images.map((img, i) => (
+            <SwiperSlide key={i}>
+              <img
+                src={img}
+                className="w-full h-[400px] sm:h-[450px] md:h-[400px] lg:h-[400px] xl:h-[500px] 
+                            mx-auto rounded-xl object-cover shadow-2xl 
+                           transform transition-transform duration-700 hover:scale-105"
+                alt={`pet-${i}`}
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </>

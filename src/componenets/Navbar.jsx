@@ -8,97 +8,138 @@ import { toast } from "react-toastify";
 const Navbar = () => {
   const { user, logOut } = use(AuthContext);
   const [hover, setHover] = useState(false);
-  const navLinks = (
-    <>
-      <li>
-        <NavLink to="/">Home</NavLink>
-      </li>
-      <li>
-        <NavLink to="/services">Services</NavLink>
-      </li>
-      <li>
-        <NavLink to="/profile">My Profile</NavLink>
-      </li>
-    </>
-  );
 
   const handleLogOut = () => {
-    // console.log("user trying to logout");
     logOut()
-      .then(() => {
-        toast.success("Log Out Successfully");
-      })
-      .catch((error) => {
-        toast.error(error.message);
-      });
+      .then(() => toast.success("Logged Out Successfully"))
+      .catch((err) => toast.error(err.message));
   };
 
   return (
-    <div className="pb-5">
-      <div className="navbar bg-base-100 shadow-sm mx-auto">
-        <div className="navbar-start ">
+    <div className="w-full bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-300 shadow-md sticky top-0 z-50">
+      {/* Center Content */}
+      <div className="navbar container mx-auto px-4">
+        {/* Left: Logo + Mobile Menu */}
+        <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                {" "}
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />{" "}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             </div>
+
+            {/* Dropdown Menu */}
             <ul
-              tabIndex="-1"
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              tabIndex={0}
+              className="menu menu-sm dropdown-content bg-base-100 mt-3 w-52 p-2 shadow rounded-box"
             >
-              {navLinks}
+              <li>
+                <NavLink to="/">Home</NavLink>
+              </li>
+              <li>
+                <NavLink to="/services">All Services</NavLink>
+              </li>
+              {!user && (
+                <li>
+                  <NavLink to="/auth/login">Login/Register</NavLink>
+                </li>
+              )}
+              <li>
+                <NavLink to="/about">About Us</NavLink>
+              </li>
+              <li>
+                <NavLink to="/contact">Contact</NavLink>
+              </li>
+              <li>
+                <NavLink to="/support">Support</NavLink>
+              </li>
+              {user && (
+                <li>
+                  <NavLink to="/profile">My Profile</NavLink>
+                </li>
+              )}
             </ul>
           </div>
-          <Link to={"/"} className="text-xl font-semibold md:ml-20">
-            <img className="w-50 " src={pawImg} alt="" />
+
+          {/* Logo */}
+          <Link to="/" className="text-xl font-bold">
+            <img src={pawImg} className="w-50" alt="logo" />
           </Link>
         </div>
+
+        {/* Center: Main Menu Desktop */}
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+          <ul className="menu menu-horizontal px-1 gap-4 font-medium">
+            <li>
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/services">All Services</NavLink>
+            </li>
+            {/* {!user && (
+              <li>
+                <NavLink to="/auth/login">Login/Register</NavLink>
+              </li>
+            )} */}
+            <li>
+              <NavLink to="/blogs">Blogs</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about">About Us</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact">Contact</NavLink>
+            </li>
+            {user && (
+              <li>
+                <NavLink to="/profile">My Profile</NavLink>
+              </li>
+            )}
+          </ul>
         </div>
-        <div className="navbar-end md:mr-20 gap-2 ">
-          {/* {user && user.email} */}
+
+        {/* Right: User Avatar + Login/Logout */}
+        <div className="navbar-end gap-3">
+          {/* Profile Image */}
           <Link
-            to={"/profile"}
+            to="/profile"
             className="relative w-10 h-10 group"
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
           >
-            {/* Hover Display Name */}
-            <span className="absolute -left-24 top-1 bg-gray-800 text-white text-sm py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
-              {user ? user?.displayName : "Click me"}
+            {/* Tooltip */}
+            <span className="absolute -left-24 top-1 bg-gray-800 text-white text-sm py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-all duration-300">
+              {user ? user.displayName : "Click me"}
             </span>
+
             <img
-              className="w-10 h-10 rounded-full cursor-pointer border-2 border-pink-500 "
-              src={`${user ? user.photoURL : userImg}`}
+              className="w-10 h-10 rounded-full cursor-pointer border-2 border-pink-600"
+              src={user ? user.photoURL : userImg}
               alt=""
             />
           </Link>
 
-          <div>
-            {user ? (
-              <button onClick={handleLogOut} className="btn btn-primary px-10">
-                Log Out
-              </button>
-            ) : (
-              <Link to="/auth/login" className="btn btn-primary px-10">
-                Login
-              </Link>
-            )}
-          </div>
+          {/* Login / Logout */}
+          {user ? (
+            <button onClick={handleLogOut} className="btn btn-primary px-6">
+              Logout
+            </button>
+          ) : (
+            <Link to="/auth/login" className="btn btn-primary px-6">
+              Login
+            </Link>
+          )}
         </div>
       </div>
     </div>
