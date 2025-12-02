@@ -4,7 +4,7 @@
 
 2. Live link:
 
-   https://wonderful-meerkat-73d18a.netlify.app/
+  https://lustrous-platypus-529f51.netlify.app/
 
 3. Project purpose:
 
