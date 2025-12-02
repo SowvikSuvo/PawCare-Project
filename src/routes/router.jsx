@@ -32,7 +32,11 @@ const router = createBrowserRouter([
       {
         path: "/services",
         element: <Services></Services>,
-        loader: () => fetch("/pet.json"),
+        loader: async () => {
+          const res = await fetch("/pet.json");
+          if (!res.ok) throw new Error("Failed to load pet data");
+          return res.json();
+        },
         hydrateFallbackElement: <Loading></Loading>,
       },
       {

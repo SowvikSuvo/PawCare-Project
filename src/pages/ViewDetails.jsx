@@ -8,14 +8,19 @@ import { motion } from "framer-motion";
 const ViewDetails = () => {
   const data = useLoaderData();
   const { id } = useParams();
-  const [views, setViews] = useState({});
+  const [views, setViews] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const viewDetails = data.find((singleViews) => singleViews.id == id);
-    setViews(viewDetails);
+    if (data && data.length > 0) {
+      const viewDetails = data.find(
+        (singleViews) => singleViews.id.toString() === id
+      );
+      setViews(viewDetails || null);
+      setLoading(false);
+    }
   }, [data, id]);
 
-  // Framer Motion Variants
   const headingVariant = {
     hidden: { opacity: 0, y: -30 },
     visible: {
@@ -36,15 +41,21 @@ const ViewDetails = () => {
     hover: { scale: 1.05, transition: { duration: 0.3 } },
   };
 
+  if (loading) {
+    return (
+      <div className="text-center my-20">
+        <span className="loading loading-lg loading-spinner text-indigo-600"></span>
+      </div>
+    );
+  }
+
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Sticky Navbar */}
       <header className="sticky top-0 z-50">
         <Navbar />
       </header>
 
       <main className="flex-1 container mx-auto px-4 md:px-8 lg:px-16 space-y-8 mt-5">
-        {/* Animated Heading */}
         <motion.h2
           className="text-center font-bold text-3xl sm:text-4xl md:text-5xl mb-4"
           variants={headingVariant}
@@ -56,17 +67,21 @@ const ViewDetails = () => {
           <span className="text-blue-600">Details</span> here
         </motion.h2>
 
-        {/* Animated Service Card */}
-        <motion.div
-          variants={cardVariant}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <ViewDetailsCard views={views} />
-        </motion.div>
+        {views ? (
+          <motion.div
+            variants={cardVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <ViewDetailsCard views={views} />
+          </motion.div>
+        ) : (
+          <div className="text-center text-gray-500 py-20">
+            Service not found.
+          </div>
+        )}
 
-        {/* Animated Button */}
         <motion.div
           className="flex justify-center"
           variants={buttonVariant}
@@ -78,7 +93,7 @@ const ViewDetails = () => {
           <Link
             to={"/services"}
             className="btn mt-5 text-white rounded-xl px-6 py-3 font-semibold
-              bg-gradient-to-r from-orange-600 via-pink-600 to-sky-500
+              bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500
               hover:scale-105 transition-transform duration-300"
           >
             Back to Services

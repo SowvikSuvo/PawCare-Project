@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
+import Swal from "sweetalert2";
 
 const ViewDetailsCard = ({ views }) => {
   const [showModal, setShowModal] = useState(false);
@@ -9,7 +10,13 @@ const ViewDetailsCard = ({ views }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    toast.success("🎉 Booking Successful!");
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "🎉 Booking Successful!",
+      showConfirmButton: false,
+      timer: 1500,
+    });
     setFormData({ name: "", email: "" });
     setShowModal(false);
   };
@@ -68,7 +75,7 @@ const ViewDetailsCard = ({ views }) => {
       {/* Details Section */}
       <div className="md:w-1/2 p-6 flex flex-col justify-between space-y-3">
         <div>
-          <h2 className="text-3xl font-bold text-orange-500 mb-2">
+          <h2 className="text-3xl font-bold text-blue-500 mb-2">
             {serviceName}
           </h2>
           <p className="text-gray-700 text-sm">

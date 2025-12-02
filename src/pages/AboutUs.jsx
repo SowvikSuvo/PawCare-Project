@@ -9,19 +9,22 @@ const team = [
     id: 1,
     name: "Dr. Emily Pawson",
     role: "Veterinarian",
-    image: "https://images.pexels.com/photos/774731/pexels-photo-774731.jpeg",
+    image:
+      "https://plus.unsplash.com/premium_photo-1661578535048-7a30e3a71d25?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 2,
     name: "John Barker",
     role: "Pet Nutritionist",
-    image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg",
+    image:
+      "https://images.unsplash.com/photo-1659353888323-1f5c85ea3952?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 3,
     name: "Sophia Meow",
     role: "Pet Grooming Expert",
-    image: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg",
+    image:
+      "https://plus.unsplash.com/premium_photo-1663040617958-4cba2ab2e496?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 

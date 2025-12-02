@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import PawCareServiceCenters from "./PawCareServiceCenters";
 
 const Contact = () => {
   return (
@@ -30,8 +31,8 @@ const Contact = () => {
           whileHover={{ scale: 1.05, rotateY: 5 }}
           className="bg-white rounded-3xl shadow-xl p-8 flex flex-col items-center text-center border border-gray-200 transition-all"
         >
-          <FaMapMarkerAlt className="text-orange-500 text-5xl mb-4" />
-          <h3 className="text-2xl font-bold text-orange-500 mb-2">Location</h3>
+          <FaMapMarkerAlt className="text-teal-500 text-5xl mb-4" />
+          <h3 className="text-2xl font-bold text-teal-500 mb-2">Location</h3>
           <p className="text-gray-700 text-lg">
             123 Paw Street, Pet City, Bangladesh
           </p>
@@ -54,6 +55,10 @@ const Contact = () => {
           <h3 className="text-2xl font-bold text-pink-500 mb-2">Email</h3>
           <p className="text-gray-700 text-lg">contact@pawcare.com</p>
         </motion.div>
+      </div>
+
+      <div>
+        <PawCareServiceCenters></PawCareServiceCenters>
       </div>
 
       {/* Contact Form + Map */}
