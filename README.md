@@ -1,7 +1,7 @@
 1. Project name:
 
-   WarmPaws – Pet Care in Winter
-
+  PawCare – Winter Pet Care Website
+  
 2. Live link:
 
   https://lustrous-platypus-529f51.netlify.app/
@@ -18,10 +18,9 @@
 
    and Tailwind CSS.
 
-   It allows pet owners to explore winter care services, book appointments, and manage authentication securely.
-   The application features Google Login, Private Routes, and a smooth user experience with a persistent navbar and footer.
+ PawCare is a modern web application designed to help pet owners find winter care services, expert vets, grooming tips, and helpful articles Booking services.  
+The homepage is crafted with soft winter visuals, smooth transitions, and dynamic components to offer users a delightful browsing experience.
 
-4. Key features:
 
   # 🏠 Home Page Explained
 
