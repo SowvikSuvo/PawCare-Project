@@ -23,17 +23,69 @@
 
 4. Key features:
 
-   🏠 Home Page-
+  # 🏠 Home Page Explained
 
-   Warm winter-themed hero slider built with Swiper.js,
+## ❄️ Winter-Themed Hero Slider
+- Created using **Swiper.js** and animated with **Framer Motion**  
+- Smooth, responsive hero slider with winter graphics  
+- Engaging intro that sets the tone of the platform  
 
-   Popular Winter Services — cards dynamically loaded from JSON data,
 
-   Winter Care Tips — static section for pet care advice,
+ ## 🐾 Popular Winter Services
+- Dynamically loaded from JSON data  
+- Each service includes an image, title, and short description  
+- Tailwind-based responsive cards with hover effects  
 
-   Meet Our Expert Vets — introduction of professional vets,
+## 🧣 Winter Care Tips
+Helpful pet safety tips are displayed in a clean and easy-to-read section:
+- Keep your pet hydrated  
+- Avoid cold metal surfaces  
+- Use paw balm  
+- Provide warm bedding  
+- Limit outdoor time  
 
-   Additional section: Customer Testimonials,
+## 🩺 Meet Our Expert Vets
+Showcases professional veterinarians with:
+- Photos  
+- Names  
+- Specializations  
+- Experience  
+- Ratings  
+
+## 🐶 Our PawCare Services
+Top services include:
+- Grooming & Spa  
+- Nutrition & Diet  
+- Health Checkups  
+- Play & Exercise  
+
+ ## ⭐ Customer Testimonials
+Real feedback from pet owners across:
+- USA, UK, Australia, Canada, Germany, France  
+- Builds trust and social proof for new visitors  
+
+## 📚 Articles & Pet Care Tips
+Blog-style articles covering:
+- Winter care guides  
+- Grooming tips  
+- Healthy diet plans  
+Each article includes title, summary, author, date, and “Read More” button.
+
+## 🌍 PawCare Service Centers
+Locations in:
+- Bangladesh – Dhaka  
+- India – Mumbai  
+- USA – New York  
+Includes address, phone, email, and "Visit Center" button.
+
+## 📨 Newsletter Subscription
+- Email input field  
+- Subscribe button  
+- Privacy note: **“We care about your privacy — no spam, just love for your pets.”**
+
+---
+
+# 🛠 Tech Stack (Frontend Only)
 
    🔐 Authentication (Firebase)-
 
@@ -67,28 +119,30 @@
 
    Fully responsive and mobile-friendly,
 
-5. Package Install:
 
-   react,
+# 🛠 Tech Stack & Dependencies
 
-   react-hot-toast,
+**Frontend Framework & Libraries**
+- React.js  
+- React DOM  
+- React Router DOM 
+- Framer Motion   
+- Swiper.js 
+- React Hot Toast  
+- React Toastify  
+- React Type Animation  
+- React Icons  
 
-   react-type-animation,
+**Styling**
+- TailwindCSS  
+- DaisyUI 
+- Animate.css  
+- AOS (Animate on Scroll)
 
-   react-toastify,
+**Firebase**
+- Firebase 
 
-   swiper,
+**Alerts**
+- SweetAlert2 
 
-   react-router,
 
-   animate.css,
-
-   firebase,
-
-   react-dom,
-
-   react-icons,
-
-   daisyUi,
-
-   tailwind-CSS,
